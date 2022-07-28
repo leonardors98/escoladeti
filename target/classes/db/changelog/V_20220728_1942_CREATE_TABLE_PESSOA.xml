@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+        
+	<changeSet id="0" author="igor.gorini">
+		<createTable tableName="pessoa">
+			<column name="id" type="numeric(10,0)">
+				<constraints nullable="false" primaryKey="true" primaryKeyName="pk_pessoa"/>
+			</column>
+			<column name="nome" type="varchar(100)"></column>
+			<column name="cpf" type="varchar(11)"></column>
+			<column name="data_nascimento" type="date"></column>
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>
+
