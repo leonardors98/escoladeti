@@ -8,7 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import edu.unicesumar.escoladeti.domain.Disciplina;
-import edu.unicesumar.escoladeti.repository.CursoRepository;
 import edu.unicesumar.escoladeti.repository.DisciplinaRepository;
 
 @Service
