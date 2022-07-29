@@ -4,16 +4,24 @@
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
         
-	<changeSet id="0" author="leonardors98">
+	<changeSet id="0" author="leonardo.souza">
 		<createTable tableName="curso">
 			<column name="id" type="numeric(10,0)">
 				<constraints nullable="false" primaryKey="true" primaryKeyName="pk_curso"/>
 			</column>
 			<column name="nome" type="varchar(100)"></column>
-			<column name="carga_horaria_maxima" type="long"></column>
-			<column name="carga_horaria_minima" type="long"></column>
+			<column name="carga_horaria_maxima" type="numeric(10,0)"></column>
+			<column name="carga_horaria_minima" type="numeric(10,0)"></column>
 			<column name="data_provacao_curso" type="date"></column>
 		</createTable>
 	</changeSet>
+
+
+    <changeSet id="1" author="leonardo.souza">
+
+		<addForeignKeyConstraint baseTableName="" baseColumnNames="" constraintName="pk_disciplina" referencedTableName="disciplina" referencedColumnNames="" />
+
+	</changeSet>
+
 
 </databaseChangeLog>
